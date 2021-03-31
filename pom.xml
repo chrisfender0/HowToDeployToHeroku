@@ -14,7 +14,7 @@
 	<name>HowToDeployToHeroku</name>
 	<description>How to deploy a spring boot app to heroku </description>
 	<properties>
-		<java.version>11</java.version>
+    <java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
