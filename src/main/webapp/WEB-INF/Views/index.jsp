@@ -5,8 +5,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Index</title>
+<%@ include file="Header.jsp" %>
 </head>
 <body>
-<h1>Hello World!</h1>
+<%@ include file="Navigation.jsp" %>
+<%@ include file="Footer.jsp" %>
 </body>
 </html>

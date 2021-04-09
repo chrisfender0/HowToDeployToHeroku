@@ -1,0 +1,13 @@
+input#phoneNumber {
+	width: 150px;
+}
+
+input.phoneNumber2 {
+    height: 30px;
+    width: 40px;
+    text-align: center;
+}
+
+input.phoneNumber2:last-child{
+    width: 50px;
+}
