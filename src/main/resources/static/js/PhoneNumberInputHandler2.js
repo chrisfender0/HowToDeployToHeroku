@@ -4,6 +4,7 @@ $(document).ready(function(){
             PhoneNumberInputHandler2.init(this, e);
         });
     });
+    PhoneNumberInputHandler2.initListenerOnSubmit();
 });
 
 let PhoneNumberInputHandler2 = {
@@ -25,7 +26,6 @@ let PhoneNumberInputHandler2 = {
     limitDigits: function(input, MAXLENGTH){
         let inputValue = $(input).val();
         if(inputValue.length > MAXLENGTH){
-            console.log("I SLICED HIM");
             return inputValue.slice(0, -1); 
         }
         return inputValue;
@@ -57,6 +57,24 @@ let PhoneNumberInputHandler2 = {
                 }
                 break;
         }
+    },
+    initListenerOnSubmit: function() {
+        let rightDiv = $('div.col-sm')[1];
+        let rightButton = $(rightDiv).find('button');
+        $(rightButton).on('click', function(){
+            PhoneNumberInputHandler2.submitAndShowText();
+            console.log('listener set');
+        });
+    },
+    submitAndShowText: function() {
+        let phoneNumber = "";
+        $('.phoneNumber2').each(function(){
+            phoneNumber = phoneNumber + $(this).val();
+        });
+        $('#modal-body-text').html(PhoneNumberInputHandler2.formatOutput(phoneNumber));
+    },
+    formatOutput: function(phoneNumber) {
+        return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3,6)}-${phoneNumber.slice(6, 10)}`
     }
 
 }
