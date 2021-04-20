@@ -63,6 +63,10 @@ let PhoneNumberInputHandler = {
     },
     submitAndShowText: function() {
         $('#modal-body-text').html($('#phoneNumber').val());
+        let button = $('.btn-secondary')[0];
+        $('#modal').on('shown.bs.modal', function () {
+        	$(button).focus();
+    	});
     }
 
 }

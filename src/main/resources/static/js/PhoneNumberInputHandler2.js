@@ -63,7 +63,6 @@ let PhoneNumberInputHandler2 = {
         let rightButton = $(rightDiv).find('button');
         $(rightButton).on('click', function(){
             PhoneNumberInputHandler2.submitAndShowText();
-            console.log('listener set');
         });
     },
     submitAndShowText: function() {
@@ -72,6 +71,10 @@ let PhoneNumberInputHandler2 = {
             phoneNumber = phoneNumber + $(this).val();
         });
         $('#modal-body-text').html(PhoneNumberInputHandler2.formatOutput(phoneNumber));
+        let button = $('.btn-secondary')[0];
+        $('#modal').on('shown.bs.modal', function () {
+        	$(button).focus();
+    	});
     },
     formatOutput: function(phoneNumber) {
         return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3,6)}-${phoneNumber.slice(6, 10)}`
