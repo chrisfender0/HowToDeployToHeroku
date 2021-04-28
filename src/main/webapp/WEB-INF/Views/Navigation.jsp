@@ -20,7 +20,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/javascriptDemo">JavaScript</a>
-          <a class="dropdown-item" href="#">Ajax</a>
+          <a class="dropdown-item" href="/ajaxPage">Ajax</a>
           <a class="dropdown-item" href="#">Java</a>
         </div>
       </li>

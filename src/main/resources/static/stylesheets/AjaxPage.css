@@ -1,0 +1,6 @@
+#suggestionBox, #typeahead {
+	width: 350px;
+}
+#suggestionBox {
+	height: 300px;
+}
